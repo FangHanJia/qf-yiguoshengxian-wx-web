@@ -1,37 +1,3 @@
-/*重置样式表*/
-/*==========样式重置===========*/
-body,h1,h2,h3,h4,p,a,input,img,ul,li,ol,dl,dt,dd{
-    padding:0;
-    margin:0;}
-ul,ol{
-    list-style:none;}
-img{
-    display:block;
-    border:0;}
-input{
-    /*去掉高亮*/
-    outline:none;}
-header,footer,section,main,nav{
-    display:block;}
-body{
-    font-size:24px;
-    font-family:"微软雅黑";
-    color:#3e3e3e;}
-a{
-    text-decoration:none;
-    color:#0dc441;}
-a:hover{
-    text-decoration:underline;}
-i{font-style:normal;}
-*{box-sizing:border-box;}
-/*1.meta设置理想视口（配合3句js代码使用（获取设备缩放比，将其倒数赋给meta的content）（meta的id记得加上））*/
-/*2.新建css文件（base.css文件可以拷贝）*/
-/*--------------做页面---------------*/
-/*1.将整个页面设置成100%,设置成弹性盒，主轴是竖直向下*/
-body,html{height: 100%;}
-
-
-/*-------------------------------------------*/
 
 @font-face {font-family: "iconfont";
   src: url('iconfont.eot?t=1524908996045'); /* IE9*/
