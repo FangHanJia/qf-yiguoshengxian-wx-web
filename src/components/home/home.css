@@ -1,0 +1,9 @@
+html,body{height: 100%;}
+
+.box{height: 100%;display:flex;flex-direction:column;}
+
+.header{height:1.5625rem;background:red;}
+
+.main{flex:1;background-color:blue;}
+
+.footer{height: 1.5625rem;background-color:yellow;}
