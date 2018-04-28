@@ -1,24 +1,18 @@
 <template>
-    <div class="box">
-        <div class="header">
-
-        </div>
-        <div class="main">
-
-        </div>
+    <div id="index">
+        <h1>index</h1>
         <footComponent></footComponent>
     </div>
 </template>
 
 <script>
-    import './home.css'
     import footComponent from '../footer/foot.vue'
-
-
-    export default {
+    import './index.css'
+    export default{
         components: {
            footComponent
         }
-
     }
+
+
 </script>
