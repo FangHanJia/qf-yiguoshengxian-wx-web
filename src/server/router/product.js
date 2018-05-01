@@ -9,7 +9,7 @@ var fs = require('fs');
 //设置上传的目录，  
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        var _path = path.join(__dirname, "../../img");
+        var _path = path.join(__dirname, "../../components/img/");
         if(!fs.existsSync(_path)){
             fs.mkdirSync(_path);
         }
@@ -26,12 +26,28 @@ var upload = multer({ storage: storage });
 // 暴露模块
 module.exports = {
     product(app){
+        // 上传商品
         app.post('/addproduct',upload.single('proimg'),async (req,res)=>{
-            let proname = req.body.proname;
-            let proprice = req.body.proprice;
-            let pathname = `/img/${req.file.originalname}`;
-
-            let result = await db.insert('products',{proname,proprice,pathname});
+            let content = req.body.content;
+            let intro = req.body.intro;
+            let sale = req.body.sale;
+            let price = req.body.price;
+            let qtycont = req.body.qtycont;
+            console.log(intro);
+            let img = `/img/${req.file.originalname}`;
+            let result = await db.insert('products',{content,intro,sale,qtycont,price,img});
+            res.send(result);
+        });
+        // 获取商品
+        app.get('/getproduct',async (req,res)=>{
+            let result = await db.select('products');
+            res.send(result);
+        });
+        // 删除商品
+        app.post('/delproduct',async (req,res)=>{
+            let id = req.body.id;
+            id = Number(id);
+            let result = await db.delete('products',{id});
             res.send(result);
         })
     }

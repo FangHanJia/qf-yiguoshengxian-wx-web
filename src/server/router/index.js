@@ -20,7 +20,6 @@ app.all('*', function(req, res, next) {
 
 // 全局使用
 app.use(bp.urlencoded({extended:false}));
-app.use(express.static(path.join(__dirname,'../web/')));
 
 // 引入功能路由
 const user = require('./user');

@@ -34,7 +34,8 @@
             login(){
                 http.post('login', this.data).then((res) => {
                     if(res.status){
-                        // window.localStorage.setItem('token',res.data); 
+                        let _username = res.data[0].username;
+                        window.localStorage.setItem('_username',_username); 
                         this.$router.push({name:'serverhome'});    
                     }else{
                         this.data.username = '';

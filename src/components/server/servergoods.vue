@@ -5,23 +5,32 @@
              <div class="form" >
                 <h2>增加商品</h2>
                 <div class="form-group">
-                    <label for="procontent">content:</label>
-                    <input type="text" class="form-control" id="procontent" name="procontent">
+                    <label for="content">content:</label>
+                    <input type="text" class="form-control" id="content" name="content">
                 </div>
                 <div class="form-group">
-                    <label for="prointro">intro:</label>
-                    <input type="text" class="form-control" id="prointro" name="prointro">
+                    <label for="intro">intro:</label>
+                    <input type="text" class="form-control" id="intro" name="intro">
                 </div>
-
-
-
+                <div class="form-group">
+                    <label for="sale">sale:</label>
+                    <input type="text" class="form-control" id="sale" name="sale">
+                </div>
+                <div class="form-group">
+                    <label for="qtycont">qtycont:</label>
+                    <input type="text" class="form-control" id="qtycont" name="qtycont">
+                </div>
+                <div class="form-group">
+                    <label for="price">price:</label>
+                    <input type="text" class="form-control" id="price" name="price">
+                </div>
 
                 <div class="form-group">
                     <label for="proimg">img:</label>
-                    <input type="file"  id="proimg" name="proimg">
+                    <input type="file"  id="proimg" name="proimg" class="proimg">
                 </div>
-                <button type="submit" class="btn btn-default" id="btn_save">保存</button>
-                <button type="submit" class="btn btn-default" @click="close">取消</button>
+                <button type="submit" class="btn btn-default btn-success" id="btn_save" @click="btn_save">保存</button>
+                <button type="submit" class="btn btn-default btn_close btn-success" @click="close">取消</button>
             </div>
         </div>
 
@@ -32,12 +41,16 @@
             <button class="btn" @click="addProduct">增加商品</button>
 
         </div>
-        <datagrid :config="config"></datagrid>
+        <div class="tablebox">
+            <datagrid :config="config"></datagrid>
+        </div>
     </div>
 </template>
 
 <script type="text/javascript">
     import datagrid from './datagrid.vue';
+    import http from '../../utils/httpclient';
+
     export default{
         components:{
             datagrid
@@ -45,8 +58,8 @@
         data(){
             return {
                 config:{
-                    url:'getuser',
-                    // cols:['id','img','content','intro','sale','price','qtycont','time','img1']
+                    url:'getproduct',
+                    cols:['id','_id','img','content','intro','sale','price','qtycont']
                 },
                 show:false
 
@@ -58,6 +71,39 @@
             },
             close(){
                 this.show = false;
+            },
+            btn_save(){
+               var myform = new FormData();
+               var files = $('#proimg')[0].files[0];
+                myform.append('content', $('#content').val());
+                myform.append('sale', $('#sale').val());
+                myform.append('price', $('#price').val());
+                myform.append('intro', $('#intro').val());
+                myform.append('qtycont', $('#qtycont').val());
+                myform.append('proimg', $('#proimg')[0].files[0]);
+                
+                console.log(files)
+                if(!files){
+                    alert('文件不能为空！');
+                    return ;
+                }else{
+                    http.upload({
+                        url: 'addproduct', 
+                        data: myform, 
+                        cb:function(res){
+                            console.log(res);
+                            if(res.status){
+                                alert('商品添加成功！');
+                                this.show = false;
+                            }else{
+                                alert('商品添加失败！');
+                                this.show = false;
+                            }
+                        }.bind(this)
+                    })
+                    
+                }
+
             }
         }
     } 

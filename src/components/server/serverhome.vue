@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <div class="hd">
+        <div class="hd" id="hd">
             <hd></hd>
         </div>
         <div class="cont">
@@ -9,7 +9,7 @@
                 <router-view></router-view>
             </div>
         </div>
-        <div class="foot">
+        <div class="foot" id="ft">
             <foot></foot>
         </div>
     </div>

@@ -9,11 +9,84 @@ ol, ul ,li{list-style: none;}
 html,body{height:100%;}
 .home{height:100%;display:flex;flex-direction:column;}
 .home .cont{flex:1;overflow:hidden;}
-.hd,.foot{height:60px;background:#58bc58;}
-.menus{float:left;width:20%;;border-right:1px solid #ccc;height:100%;}
+
+.hd,.foot{
+    height:40px;background:#2d6dcc;padding:0 20px;
+    border-bottom:1px solid #ccc;
+}
+.foot{text-align:center;color:#fff;}
+.hd h3{float:left;height:40px;text-align:center;
+    line-height:40px;color:#fff;}
+.hd h1{
+    width:30px;background:url('../img/login_bg.jpg') no-repeat;
+    height:30px;border-bottom:1px solid #ccc;background-size:cover;
+    border-radius:50%;;margin:5px 0;float:left;margin-right:10px;
+}
+.hd .show_user{
+    float:right;;height:40px;text-align:center;
+    line-height:40px;color:#fff;
+}
+.hd .show_user span{
+    color:#fff;font-size:14px;
+}
+.hd .show_user span:hover{
+    color:red;text-decoration:underline;cursor:pointer;
+}
+.hd .show_user li{float:left;margin-right:10px;position:relative;}
+.hd .show_user li ul{
+    display:block;width:50px;height:80px;background:#eee;z-index:300;position:absolute;top:40px;
+}
+.hd .show_user li .style{display:none;}
+.hd .show_user li .style li{
+    height:40px;font-size:12px;color:#333;width:100%;line-height:40px;
+
+}
+.hd .show_user li .style li:hover{
+    background:#ccc;color:#fff;
+}
+/*换肤色*/
+.hd_green,.foot_green{
+    height:40px;background:#58bc58;padding:0 20px;
+    border-bottom:1px solid #ccc;
+}
+.foot_green{text-align:center;color:#fff;}
+.hd_green h3{float:left;height:40px;text-align:center;
+    line-height:40px;color:#fff;}
+.hd_green h1{
+    width:30px;background:url('../img/login_bg.jpg') no-repeat;
+    height:30px;border-bottom:1px solid #ccc;background-size:cover;
+    border-radius:50%;;margin:5px 0;float:left;margin-right:10px;
+}
+.hd_green .show_user{
+    float:right;;height:40px;text-align:center;
+    line-height:40px;color:#fff;
+}
+.hd_green .show_user span{
+    color:#fff;font-size:14px;
+}
+.hd_green .show_user span:hover{
+    color:red;text-decoration:underline;cursor:pointer;
+}
+.hd_green .show_user li{float:left;margin-right:10px;position:relative;}
+.hd_green .show_user li ul{
+    display:block;width:50px;height:80px;background:#eee;z-index:300;position:absolute;top:40px;
+}
+.hd_green .show_user li .style li{
+    height:40px;font-size:12px;color:#333;width:100%;line-height:40px;
+
+}
+.hd_green .show_user li .style li:hover{
+    background:#ccc;color:#fff;
+}
+
+
+
+
+
+.menus{float:left;width:15%;;border-right:1px solid #ccc;height:100%;}
 .menus a{display:block;height:40px;border-bottom:1px solid #ccc;color:#333;font-size:18px;line-height:40px;text-align:center;text-decoration:none;}
 .menus a:hover{color:#58bc58;}
-.datagrid{float:left;width:80%;height:100%;position:relative;}
+.datagrid{float:left;width:85%;height:100%;position:relative;}
 .datagrid thead th{font-size:20px;}
 .datagrid td{font-size:16px;}
 .selectbox{
@@ -35,8 +108,18 @@ html,body{height:100%;}
     position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
     border-radius:10px;color:#000;
 }
-.form label{font-size:16px;}
 .form h2{
     padding-bottom:10px;height:50px;
     text-align:center;background:#58bc58;color:#fff;line-height:50px;
+    margin-bottom:10px;
+}
+.form label{
+    font-size:16px;float:left;width:74px;text-align:right;
+    padding-right:10px;
+}
+.form input{width:395px;height:30px;}
+.form .btn_close{float:right;}
+.form .proimg{height:30px;font-size:14px;}
+.tablebox{
+    overflow-x:hidden;height:400px;
 }

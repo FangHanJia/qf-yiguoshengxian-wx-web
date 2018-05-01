@@ -54,5 +54,22 @@ export default {
                 reject(error)
             })            
         })
+    },
+    upload(_params){
+        $.ajax({
+            url: filterUrl(_params.url),
+            type: 'post',
+            data: _params.data,
+            contentType: false,
+            processData: false,
+            success: function(res){
+                if(!res.status && res.message == 'unauth'){
+                    window.location.href = 'login.html';
+                } else {
+                    _params.cb(res);
+                }
+                //hide loadding
+            }
+        })
     }
 }
