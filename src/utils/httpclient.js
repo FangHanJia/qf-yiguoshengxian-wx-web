@@ -47,6 +47,7 @@ export default {
                     router.push('login');
                     return false;
                 }               
+                console.log(res)
                 resolve(res.data)
             }).catch(error => {
                 
