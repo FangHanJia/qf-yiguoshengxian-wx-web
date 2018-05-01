@@ -11,7 +11,7 @@ html,body{height:100%;}
 .home .cont{flex:1;overflow:hidden;}
 
 .hd,.foot{
-    height:40px;background:#2d6dcc;padding:0 20px;
+    height:44px;background:#2d6dcc;padding:0 20px;
     border-bottom:1px solid #ccc;
 }
 .foot{text-align:center;color:#fff;}
@@ -46,7 +46,7 @@ html,body{height:100%;}
 }
 /*换肤色*/
 .hd_green,.foot_green{
-    height:40px;background:#58bc58;padding:0 20px;
+    height:44px;background:#58bc58;padding:0 20px;
     border-bottom:1px solid #ccc;
 }
 .foot_green{text-align:center;color:#fff;}
