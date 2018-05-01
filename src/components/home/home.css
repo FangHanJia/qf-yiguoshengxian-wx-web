@@ -2,8 +2,134 @@ html,body{height: 100%;}
 
 .box{height: 100%;display:flex;flex-direction:column;}
 
-.header{height:1.71875rem;background:red;}
+.header{height:1.71875rem;background:#39CE8E;}
 
-.main{flex:1;background-color:blue;}
+.header .headl{
+    width:3.0625rem;
+    height:1.71875rem;
+    padding:0.390625rem 0 0 0.234375rem;
+    float:left;
+}
+
+.header .headl span{
+    display:inline-block;
+    float:left;
+    width: 0.953125rem;
+    height: 0.953125rem;
+    background-color:#fff;
+    border-radius:50%;
+    margin-right:0.15625rem;
+}
+.header .headl p{
+    margin-top:0.2600rem;
+    font-size:0.21875rem;
+    color:#fff;
+}
+
+.header .headl p a{
+    font-size:0.21875rem;
+    color:#fff;
+}
+
+.header .headr{
+    float:right;
+    margin-right:0.3125rem;
+}
+.header .headr i{
+    color:#DEF6ED;
+    font-size:0.21875rem;
+}
+
+.purse{
+    width: 100%;
+    height: 0.78125rem;
+    background-color:#1EB675;
+    padding:0.125rem 0.1875rem;
+}
+.purse ul{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+.purse ul li{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align:center;
+    border-right:1px dashed #67CDA2;
+}
+.purse ul li:last-child{border-right:none;}
+.purse ul li span{
+    font-size:0.1875rem;
+    color:#fff;
+}
+
+.main{flex:1;background-color:#F4F4F4;}
+
+.main .main_t{
+    width: 100%;
+    height: 1.09375rem;
+    background-color:#fff;
+}
+
+.main .main_t ul{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+}
+.main .main_t ul li{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:center;
+}
+
+.main .main_t ul li i{
+    font-size:0.35rem;
+    margin-bottom:0.078125rem;
+}
+.main .main_t ul li span{
+    font-size:0.15625rem;
+    color:#333;
+}
+
+.main .main_b{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 2.265625rem;
+    background-color:#fff;
+    margin-top:0.2200rem;
+}
+
+.main .main_b ul{
+    flex:1;
+    width: 100%;
+    height:1.09375rem;
+    display:flex;
+    flex-direction: row;
+    border-bottom:1px solid #F4F4F4;
+}
+
+.main .main_b ul li{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:center;
+}
+
+.main .main_b ul li i{
+    font-size:0.35rem;
+    margin-bottom:0.078125rem;
+}
+.main .main_b ul li span{
+    font-size:0.15625rem;
+    color:#333;
+}
 
 .footer{height: 1.5625rem;background-color:yellow;}
