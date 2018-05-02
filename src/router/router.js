@@ -9,6 +9,12 @@ import details from '../components/details/details.vue'
 import car from '../components/car/car.vue'
 import login from '../components/home/login/login.vue'
 import reg from '../components/home/reg/reg.vue'
+// 婷婷路由
+import list from '../components/list/list'
+import sale from '../components/sale/sale'
+import newproduct from '../components/newproduct/newproduct'
+import price from '../components/price/price'
+import particulars from '../components/particulars/particulars'
 
 
 // 服务端路由
@@ -24,6 +30,13 @@ const router = new VueRouter({
         {path: '/', component: index, name: 'index'},
         {path: '/details', component: details, name: 'details'},
         {path: '/car', component: car, name: 'car'},
+        // tt
+        {path: '/list', component: list, name: 'list',children:[
+            {path: '/sale', component: sale, name: 'sale'},
+            {path: '/newproduct', component: newproduct, name: 'newproduct'},
+            {path: '/price', component: price, name: 'price'}
+        ]},
+        {path: '/particulars', component: particulars, name: 'particulars'},        
         // 服务端路由
         {path:'/serverlogin',component:serverlogin,name:'serverlogin'},
         {
