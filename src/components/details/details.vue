@@ -1,6 +1,6 @@
 <template>
     <div id="details">
-        <h1>fenlei</h1>
+        <h1>详情</h1>
         <footComponent></footComponent>
     </div>
 </template>

@@ -9,6 +9,31 @@ import details from '../components/details/details.vue'
 import car from '../components/car/car.vue'
 import login from '../components/home/login/login.vue'
 import reg from '../components/home/reg/reg.vue'
+
+//金秋
+
+import fenlei from '../components/fenlei/fenlei'
+import jinkou from '../components/fenlei/jinkou/jinkou'
+import guochan from '../components/fenlei/guochan/guochan'
+import haixian from '../components/fenlei/haixian/haixian'
+import jingxuan from '../components/fenlei/jingxuan/jingxuan'
+import jipeng from '../components/fenlei/jipeng/jipeng'
+import jiushui from '../components/fenlei/jiushui/jiushui'
+import qinlei from '../components/fenlei/qinlei/qinlei'
+import rupin from '../components/fenlei/rupin/rupin'
+import shucai from '../components/fenlei/shucai/shucai'
+import sushi from '../components/fenlei/sushi/sushi'
+import zahuo from '../components/fenlei/zahuo/zahuo'
+
+
+
+
+
+
+
+
+
+
 // 婷婷路由
 import list from '../components/list/list'
 import sale from '../components/sale/sale'
@@ -36,7 +61,27 @@ const router = new VueRouter({
             {path: '/newproduct', component: newproduct, name: 'newproduct'},
             {path: '/price', component: price, name: 'price'}
         ]},
-        {path: '/particulars', component: particulars, name: 'particulars'},        
+
+        {path: '/particulars', component: particulars, name: 'particulars'}, 
+        //jinqiu
+          {path: '/fenlei', component: fenlei, name: 'fenlei',children:[
+            {path: 'jinkou', component: jinkou, name: 'jinkou'},
+            {path: 'guochan', component: guochan, name: 'guochan'},
+            {path: 'zahuo', component: zahuo, name: 'zahuo'},
+            {path: 'haixian', component: haixian, name: 'haixian'},
+            {path: 'jingxuan', component: jingxuan, name: 'jingxuan'},
+            {path: 'jipeng', component: jipeng, name: 'jipeng'},
+            {path: 'jiushui', component: jiushui, name: 'jiushui'},
+            {path: 'qinlei', component: qinlei, name: 'qinlei'},
+            {path: 'rupin', component: rupin, name: 'rupin'},
+            {path: 'shucai', component: shucai, name: 'shucai'},
+            {path: 'sushi', component: sushi, name: 'sushi'}
+         ]},
+        
+
+
+
+
         // 服务端路由
         {path:'/serverlogin',component:serverlogin,name:'serverlogin'},
         {
