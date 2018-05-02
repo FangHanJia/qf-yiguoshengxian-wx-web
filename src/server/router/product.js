@@ -28,14 +28,15 @@ module.exports = {
     product(app){
         // 上传商品
         app.post('/addproduct',upload.single('proimg'),async (req,res)=>{
+            let id = Number(req.body.id);
             let content = req.body.content;
             let intro = req.body.intro;
             let sale = req.body.sale;
             let price = req.body.price;
             let qtycont = req.body.qtycont;
-            console.log(intro);
-            let img = `/img/${req.file.originalname}`;
-            let result = await db.insert('products',{content,intro,sale,qtycont,price,img});
+            let type = req.body.type;
+            let img = `img/${req.file.originalname}`;
+            let result = await db.insert('products',{id,content,intro,sale,qtycont,price,img,type});
             res.send(result);
         });
         // 获取商品
@@ -48,6 +49,23 @@ module.exports = {
             let id = req.body.id;
             id = Number(id);
             let result = await db.delete('products',{id});
+            res.send(result);
+        });
+        // 修改商品
+        app.post('/updateproduct',async (req,res)=>{
+            // 获取id及要修改的数据
+            var id = Number(req.body.id);
+            var img = req.body.img;
+            var content = req.body.content;
+            var intro = req.body.intro;
+            var sale = req.body.sale;
+            var qtycont = req.body.qtycont;
+            var price = req.body.price;
+            var type = req.body.type;
+            var changeObj = {img,content,intro,sale,price,qtycont,type};
+
+            // 调用数据库模块
+            var result = await db.update('products',{id},changeObj);
             res.send(result);
         })
     }

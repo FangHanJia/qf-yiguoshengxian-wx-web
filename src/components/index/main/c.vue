@@ -76,7 +76,7 @@ export default {
           // currentPage: 0,//当前页码
           thresholdDistance: 500,//滑动判定距离
           thresholdTime: 200,//滑动判定时间
-          autoplay:1000,//自动滚动[ms]
+          autoplay:2000,//自动滚动[ms]
           loop:true,//循环滚动
           direction:' horizontal',//方向设置，垂直滚动
           infinite:1,//无限滚动前后遍历数
