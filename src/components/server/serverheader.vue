@@ -1,5 +1,16 @@
 <template>
     <div>
+        <div class="show_time">
+            <p>
+                <span>{{time.year}}</span>    
+                <span>{{time.month}}</span> 
+                <span>{{time.date}}</span>   
+                <span>{{time.day}}</span>   
+                <span>{{time.hours}}</span> 
+                <span>{{time.min}}</span> 
+                <span>{{time.sec}}</span>  
+            </p>
+        </div>
         <h3>易果生鲜后台管理系统V1.0</h3>
         <ul class="show_user">
             <li><h1></h1></li>
@@ -28,7 +39,8 @@
             return {
                 data:{
                     username:''
-                }
+                },
+                time:{year:'',month:'',date:'',day:'',hours:'',min:'',sec:''}
             }
         },
         mounted(){
@@ -41,7 +53,36 @@
                         $style.slideUp();
                     })
                 });
-            })
+            });
+
+            // 封一个显示时间函数
+            var showTime = ()=>{
+                var week = '天，一，二，三，四，五，六'.split('，');
+                var d = new Date();
+                var year = d.getFullYear();
+                var month = d.getMonth() +1;
+                var date = d.getDate();
+                var day = d.getDay();
+                var hours = d.getHours();
+                var min = d.getMinutes();
+                var sec = d.getSeconds();
+
+                // 补零操作
+                min = min < 10 ? '0'+min : min;
+                sec = sec < 10 ? '0'+sec : sec;
+
+                // 将数据绑定到节点上
+                this.time.year = year+' 年';
+                this.time.month = month+' 月';
+                this.time.date = date+' 日';
+                this.time.day = '星期'+week[day];
+                this.time.hours = hours+' :';
+                this.time.min = min+' :';
+                this.time.sec = sec;
+            }
+            showTime();
+            // 实时走秒
+            setInterval(showTime,1000);
         },
         methods:{
             logout(){
