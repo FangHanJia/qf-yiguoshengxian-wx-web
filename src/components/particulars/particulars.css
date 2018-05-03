@@ -1,0 +1,296 @@
+#particulars{
+    position: relative;
+}
+.bigimgs{
+    height: 400px;
+}
+.bigimgs img{
+    height: 380px;
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+    display: block;
+
+}
+.content2{
+    font-size: 16px;
+    color:#000;
+    line-height: 40px;
+    margin-left:18px;
+}
+.intro2{
+    font-size: 14px;
+    color:#535353;
+    line-height: 20px;
+    margin-left:18px;
+}
+.price2{
+    font-size: 16px;
+    color:#b12121;
+    line-height: 40px;
+    margin-left:18px;
+}
+.qtycont2{
+    font-size: 12px;
+    color:hsl(144, 69%, 54%);
+    margin-left: 8px; 
+    padding: 10px;
+    border:1px solid hsl(144, 69%, 54%);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.chandi{
+    float: right;
+    font-size: 12px;
+    color: #535353;
+    margin-right: 12px;
+}
+.chandi span{
+    color: black;
+}
+.goods{
+    height: 104px;
+    width: 100%;
+   
+}
+
+.zhichi{
+    height: 40px;
+    border-top: 1px solid #ddd;
+   
+    font-size:12px;
+    color: #535353;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.zhichi img{
+    width: 5px;
+    height: 5px;
+    float: left;
+    margin-right: 6px;
+  
+}
+.ming{
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.songhuo{
+    height: 126px;
+   
+}
+.guige{
+   height: 50px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-top: 50px;
+}
+.qty{
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+.minus,.add{
+    background-color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    
+}
+.minus{
+    float: left;
+    position: relative;
+    width: 20px;
+    height: 30px;
+    margin-top: 8px;
+  
+}
+.add{
+    float: left;
+    position: relative;
+    width: 20px;
+    height: 30px;
+    margin-top: 8px;
+    
+}
+.shuru{
+    float: left;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    margin-top: 8px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; 
+
+    
+}
+.shuliang{
+    float: left;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 8px;
+}
+.shouhuo{
+  padding: 10px; 
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-top: 10px;
+}
+.shouhuo img{
+    width: 20px;
+    height: 30px;
+    float: left;
+    margin-top: -4px;
+}
+.shouhuo h4{
+    line-height: 20px;
+}
+.dizhi{
+   margin-left: 60px;
+}
+.songzhi{
+    float: left;
+}
+.youhuo{
+    color:#09B77D;
+    font-size: 10px;
+    margin-left: 4px;
+}
+.songda{
+    color:#535353;
+    font-size: 12px;
+    
+}
+.d-car{
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    position:fixed;
+    z-index:500;
+    top: 620px;
+    background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.zititubiao {
+    float: left;
+  padding-left: 40px;
+ 
+}
+
+.zititubiao ul li{
+    float: left;
+    margin-right: 40px;
+    font-size: 12px;
+    color:#535353;
+}
+.addcar{
+    float: right;
+    width: 100px;
+    height: 50px;
+    background-color: #FF6353;
+    font-size: 12px;
+    color: azure;
+    line-height: 40px;
+    text-align: center;
+}
+.iconfont{
+    display: block;
+    font-size:20px;
+    color:#535353;
+    
+
+}
+.pinglu{
+    margin-top: 20px;
+    height: 100px;
+    width: 100%;
+    position: relative;
+}
+.pinglu h4,.pinglu h3{
+    font-size:14px;
+    margin-left: 6px;
+
+}
+.pinglu h4{
+    padding: 6px;
+    border-bottom:1px solid #ddd;
+}
+.pinglu img{
+    height: 30px;
+}
+.haoping{
+    margin-left:200px;
+    color:red;
+    
+}
+.mingzi{
+    font-size:14px;
+    float:right;
+    margin-top: -40px;
+    
+}
+.icon-icon--{
+    position: absolute;
+    top: 0px;right: 0;
+}
+.zongjia{
+    font-size: 16px;
+    color:#b12121;
+    margin-left: 12px;
+}
+.guesslike p{
+    font-size:14px;
+    color:#535353;
+    margin: 12px;  
+}
+.guess{
+    height: 200px;
+    overflow-x: scroll;
+    display: flex;
+}
+.guess li{
+    float: left;
+    margin-left: 8px;
+    margin-right: 6px;
+    width: 100px;
+    height: 164px;
+  
+}
+.newicon-jiahao{
+    position: absolute;
+    bottom: 190px;
+    right: 0;
+    color: #09B77D;
+}
+
+.content3{
+    font-size: 12px;
+    color:#535353;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.price-3{
+    font-size: 16px;
+    color:#b12121;
+    line-height: 40px;
+}
+.chakan{
+    height: 200px;
+}
+.tuwen{
+    margin-left: 90px;
+    margin-top: 40px;
+    width: 200px;
+    height: 100px;
+}
+
