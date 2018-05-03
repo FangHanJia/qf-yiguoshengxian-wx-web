@@ -47,7 +47,8 @@
     border:1px solid #DFDFDF;
     text-align:center;
     line-height:0.46875rem;
-    font-size:0.23875rem;
+    font-size:0.1875rem;
+    color:#008842;
 }
 
 #login form p{
@@ -63,6 +64,7 @@
     width: 1.76875rem;
     height: 0.55375rem;
     border-radius:0.078125rem;
+    font-size:0.21875rem;
 }
 #login form .lr button:nth-child(1){
     background-color:#008842;
@@ -111,4 +113,33 @@
     height: 0.53125rem;
     background:url('../../img/l3.png') center no-repeat;
     transform:translateX(125%);
+}
+
+#tanchuang{
+    position:absolute;
+    width:3.6875rem;
+    height:1.375rem;
+    border-radius:0.138125rem;
+    background-color:#fff;
+    box-shadow:  0 0 0 200000px rgba(0, 0 ,0 ,0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*display:none;*/
+}
+#tanchuang p{
+    font-size:0.1875rem;
+    color:#333;
+    text-align:center;
+    width: 100%;
+    height: 0.859375rem;
+    line-height:0.859375rem;
+    border-bottom:0.03125rem solid #F7F7F7;
+}
+#tanchuang em{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size:0.1875rem;
+    line-height:0.5125rem;
 }
