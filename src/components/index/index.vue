@@ -1,18 +1,32 @@
 <template>
-    <div id="index">
-        <h1>index</h1>
+    <div>
+        <div id="box" class="tou">
+            <hh></hh>
+
+        </div>
+        <div class="main">
+        
+        <menus/>
+
+        </div>
         <footComponent></footComponent>
     </div>
 </template>
 
 <script>
-    import footComponent from '../footer/foot.vue'
+
     import './index.css'
-    export default{
+    import hh from './header/header.vue'
+    import menus from './main/main.vue'
+    import footComponent from '../footer/foot.vue'
+
+
+    export default {
         components: {
-           footComponent
+           footComponent,
+           menus,
+           hh
         }
+
     }
-
-
 </script>

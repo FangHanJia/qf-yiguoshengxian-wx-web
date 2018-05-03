@@ -32,7 +32,8 @@
         },
         methods:{
             login(){
-                http.post('login', this.data).then((res) => {
+                http.post('admin', this.data).then((res) => {
+                    // 更改管理员集合
                     if(res.status){
                         let _username = res.data[0].username;
                         window.localStorage.setItem('_username',_username); 

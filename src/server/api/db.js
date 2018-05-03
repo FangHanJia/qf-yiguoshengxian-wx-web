@@ -46,7 +46,7 @@ module.exports = {
     // 改
     async update(_collection,_data,_change){
         try{
-            let result = await db.collection(_collection).update(_data,{$set:_change});
+            let result = await db.collection(_collection).updateOne(_data,{$set:_change});
             let res = apiResult(result.result.nModified > 0,result.result);
             return res;
         }catch(error){

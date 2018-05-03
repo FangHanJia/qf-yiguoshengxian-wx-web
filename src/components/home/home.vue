@@ -1,5 +1,5 @@
 <template>
-    <div class="box">
+    <div class="box_l">
         <div class="header">
             <div class="headl">
                 <span></span>
@@ -28,8 +28,8 @@
                 </li>
             </ul>
         </div>
-        <div class="main">
-            <div class="main_t">
+        <div class="lmain">
+            <div class="lmain_t">
                 <ul>
                     <li>
                         <i class="iconfont icon-daizhifu"></i>
@@ -53,7 +53,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="main_b">
+            <div class="lmain_b">
                 <ul>
                     <li>
                         <i class="iconfont icon-wodeshouhuodizhi" style="color:red;"></i>

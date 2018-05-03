@@ -1,6 +1,245 @@
-/* 
-* @Author: Marte
-* @Date:   2018-04-28 17:02:20
-* @Last Modified by:   Marte
-* @Last Modified time: 2018-04-28 17:02:22
-*/
+#car{
+    width: 100%;
+    height: 100%;
+    background-color:#F4F4F4;
+}
+#car h2{
+    width: 100%;
+    height: 0.55375rem;
+    padding-left:0.15625rem;
+    line-height: 0.55375rem;
+    font-size:0.15625rem;
+    background-color: #FFF9EB;
+    border-bottom:0.015625rem solid #FFEDD0;
+}
+#car h2 i{
+    color:red;
+}
+
+#car .tab1{
+    width: 100%;
+    margin-top:0.15625rem;
+}
+#car .tab1 li{
+    width: 100%;
+    height: 2.465625rem;
+    background-color: #fff;
+    border-bottom:1px solid #ddd;
+    padding-left:0.378125rem;
+    position: relative;
+    overflow: hidden;
+}
+#car .tab1 li em{
+    display: inline-block;
+    width: 0.2525rem;
+    height: 0.2525rem;
+    border-radius:50%;
+    border:1px solid #DDD;
+    position:absolute;
+    top: 0.7rem;
+    left: 0.08125rem;
+}
+.ative{
+    background-color:#09B77D;
+}
+#car .tab1 li .boxl{
+    width: 1.25rem;
+    height: 1.8125rem;
+    padding:0.5rem 0 0 0.234375rem;
+    float:left;
+    position:relative;
+}
+#car .tab1 li img{
+    width: 1.015625rem;
+    height: 0.703125rem;
+}
+#car .tab1 li .boxl p{
+    color:#11B57C;
+    font-size:0.16875rem;
+    position:absolute;
+    bottom:0;
+    right: 0;
+}
+#car .tab1 li .boxr{
+    width: 3.303125rem;
+    height: 1.8125rem;
+    float:right;
+    padding:0.20875rem 0 0 0.375rem;
+    position:relative;
+}
+
+#car .tab1 li .boxr p{
+    font-size:0.16875rem;
+    width: 2.25rem;
+}
+#car .tab1 li .boxr i{
+    position:absolute;
+    top: 0.17625rem;
+    right: 0.15625rem;
+}
+
+#car .tab1 li .boxr .youhui{
+    width: 100%;
+    height: 0.66875rem;
+
+}
+
+#car .tab1 li .boxr span{
+    font-size:0.16875rem;
+    font-weight: bold;
+    color:#FF6353;
+    margin-right: 0.078125rem;
+}
+#car .tab1 li .boxr del{
+    font-size:0.16875rem;
+    color:#ddd;
+}
+#car .tab1 li .boxr .pri{
+    display:inline-block;
+    vertical-align:middle;
+    margin-left:0.234375rem;
+}
+#car .tab1 li .boxr .pri button{
+    display:inline-block;
+    width: 0.375rem;
+    height: 0.375rem;
+    text-align: center;
+    line-height: 0.175rem;
+    border:1px solid #eee;
+    background-color: #fff;
+    color:#ddd;
+    vertical-align: top;
+}
+#car .tab1 li .boxr .pri button:nth-child(1){
+    border-top-left-radius: 0.078125rem;
+    border-bottom-left-radius: 0.078125rem;
+}
+#car .tab1 li .boxr .pri button:nth-child(3){
+    border-top-right-radius: 0.078125rem;
+    border-bottom-right-radius: 0.078125rem;
+}
+#car .tab1 li .boxr .pri input{
+    display:inline-block;
+    width: 0.5625rem;
+    height: 0.375rem;
+    border:1px solid #eee;
+    margin:0 -.108125rem 0 -.108125rem;
+    vertical-align: top;
+    font-size:0.1875rem;
+    text-align: center;
+}
+#car .tab1 li .man{
+    width: 100%;
+    height: 0.46875rem;
+    float:left;
+    border-top:0.015625rem solid #ddd;
+    margin-top:0.15625rem;
+}
+#car .tab1 li .man p{
+    font-size:0.16875rem;
+    line-height: 0.46875rem;
+}
+#car .tab1 li .man p i{
+    color:#5BB57C;
+}
+
+#car .js{
+    width: 100%;
+    height: 0.78125rem;
+    border-bottom: 1px solid #ddd;
+    border-top:1px solid #ddd;
+    position:fixed;
+    bottom:0.68rem;
+    background-color: #fff;
+    z-index: 10;
+}
+#car .js p:nth-child(1){
+    float:left;
+}
+#car .js p:nth-child(2){
+    font-size:0.16875rem;
+    margin-left:0.625rem;
+    float:left;
+    margin-top:0.1125rem;
+}
+#car .js p h4{
+    font-size: 0.15625rem;
+}
+
+#car .js p:nth-child(2) span{
+    font-size:0.1875rem;
+    color:#FF6353;
+    font-weight: bold;
+}
+#car .js em{
+    display: inline-block;
+    width: 0.2525rem;
+    height: 0.2525rem;
+    border-radius:50%;
+    border:1px solid #DDD;
+    margin:0.20375rem 0 0 0.171875rem;
+}
+#car .js i{
+    font-size: 0.1675rem;
+    margin-left:0.11625rem;
+    vertical-align: middle;
+    color:#333;
+}
+#car .js h3{
+    float:right;
+    width: 1.21875rem;
+    height: 100%;
+    background-color: #FF6353;
+    font-size:0.2175rem;
+    text-align: center;
+    line-height:0.78125rem;
+    color:#fff;
+}
+
+#car .lick{
+    width: 100%;
+    background-color: #fff;
+    height: 600px;
+    margin:0.15625rem 0 1.5625rem 0;
+    overflow:hidden;
+}
+#car .lick h3{
+    font-size:0.20rem;
+    text-align: center;
+    margin-top: 0.25625rem;
+}
+#car .lick ul{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+#car .lick ul li{
+    padding-left:0.155rem;
+    width: 2.489125rem;
+    height: 3.390625rem;
+    border:none;
+    margin-top:0.15625rem;
+    position:relative;
+}
+#car .lick ul li span{
+    display:inline-block;
+    width: 2.203125rem;
+    height: 2.053125rem;
+    background-color: red;
+
+}
+#car .lick ul li p{
+    font-size:0.1875rem;
+    margin-bottom:0.2125rem;
+}
+#car .lick ul li i{
+    font-size:0.21875rem;
+    color:red;
+}
+#car .lick ul li em{
+    font-size:0.38625rem;
+    color:#09B77D;
+    position:absolute;
+    bottom: 0.15625rem;
+    right: 0.078125rem;
+}

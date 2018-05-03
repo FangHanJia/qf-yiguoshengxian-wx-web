@@ -1,16 +1,16 @@
 <template>
     <div>
         <h1>用户管理</h1>
-        <datagrid :config="config"></datagrid>
+        <usergrid :config="config"></usergrid>
     </div>
 
 </template>
 
 <script type="text/javascript">
-    import datagrid from './datagrid.vue';
+    import usergrid from './usergrid.vue';
     export default{
         components:{
-            datagrid
+            usergrid
         },
         data(){
             return {
