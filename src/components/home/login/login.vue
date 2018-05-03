@@ -70,7 +70,7 @@
                     return ;
                 }
 
-                http.post('login',this.data).then((res) =>{
+                http.post('login',this.data).then((res) =>{console.log(res);
                     if(res.status){
                         console.log(res);
                         router.push({name:'home'});

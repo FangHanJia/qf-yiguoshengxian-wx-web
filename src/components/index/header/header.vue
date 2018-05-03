@@ -1,8 +1,9 @@
 
 <template>
     <div>
-    <p>南京 <i class="iconfont icon-icon--1"></i></p>
+    <p>广州<i class="iconfont icon-icon--1"style="color:#fff;"></i></p>
      <input type="text" />
+     <span></span>
   <!--    <p>搜索</p> -->
     </div>
 </template>

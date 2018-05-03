@@ -47,7 +47,7 @@
         </div>
 
         <table class="table table-striped table-bordered table-hover">
-            <thead>
+            <thead class="tableTitle" id="tableTitle">
                 <tr>
                     <th v-for="(col,idx) in config.cols">{{col}}</th>
                     <th>操作</th>
@@ -92,7 +92,8 @@
         mounted(){
             http.get(this.config.url).then(res=>{
                 this.dataset = res.data.data;
-            })
+            });
+
         },
         methods:{
             // 删除事件
