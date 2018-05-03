@@ -67,7 +67,7 @@
             return {
                 config:{
                     url:'getproduct',
-                    cols:['id','_id','img','content','intro','sale','price','qtycont','type']
+                    cols:['id','img','content','intro','sale','price','qtycont','type']
                 },
                 show:false,
                 keyword:''
@@ -104,6 +104,14 @@
                             if(res.status){
                                 alert('商品添加成功！');
                                 this.show = false;
+                                // 清空输入框内容
+                                $('#id').val('');
+                                $('#content').val('');
+                                $('#sale').val('');
+                                $('#price').val('');
+                                $('#intro').val('');
+                                $('#qtycont').val('');
+                                $('#type').val('');
                             }else{
                                 alert('商品添加失败！');
                                 this.show = false;

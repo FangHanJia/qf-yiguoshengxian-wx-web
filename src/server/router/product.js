@@ -35,7 +35,7 @@ module.exports = {
             let price = req.body.price;
             let qtycont = req.body.qtycont;
             let type = req.body.type;
-            let img = `img/${req.file.originalname}`;
+            let img = `src/components/img/${req.file.originalname}`;
             let result = await db.insert('products',{id,content,intro,sale,qtycont,price,img,type});
             res.send(result);
         });

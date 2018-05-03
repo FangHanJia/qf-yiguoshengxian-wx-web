@@ -41,8 +41,10 @@
                 <button type="submit" class="btn btn-default btn_close btn-success" @click="btn_cacel">取消</button>
             </div>
         </div>
-
-
+        <!-- 刷新事件 -->
+        <div class="refresh">
+            <button class="btn btn-success" @click="btn_refresh">刷新</button>
+        </div>
 
         <table class="table table-striped table-bordered table-hover">
             <thead>
@@ -153,6 +155,13 @@
             // 关闭弹窗
             btn_cacel(){
                 this.show = false;
+            },
+            // 刷新
+            btn_refresh(){
+                http.get(this.config.url).then(res=>{
+                    alert('刷新成功！');
+                    this.dataset = res.data.data;
+                }) 
             }
         }
     }
