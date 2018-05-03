@@ -1,5 +1,5 @@
 <template>
-    <div class="box">
+    <div class="box_l">
         <div class="header">
             <div class="headl">
                 <span></span>

@@ -42,8 +42,8 @@ export default {
                     return ret
                 }], 
             }).then(res => {
-                if(!res.data.status && res.data.error == "unauthorized"){
-                    router.push('login');
+                if(!res.data.status && res.data.message == "unauth"){
+                    router.push({name:'login'});   
                     return false;
                 }               
                 console.log(res)

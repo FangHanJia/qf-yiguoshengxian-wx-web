@@ -1,6 +1,6 @@
 <template>
     <div id="login">
-        <form>
+        <div class="form">
             <ul>
                 <li>
                     <i class="iconfont icon-wode"></i>
@@ -25,7 +25,7 @@
                 <em class="qq"></em>
                 <em class="wb"></em>
             </div>
-        </form>
+        </div>
         <div class="log">
             <span></span>
         </div>
@@ -72,6 +72,7 @@
 
                 http.post('login',this.data).then((res) =>{console.log(res);
                     if(res.status){
+                        console.log(res);
                         router.push({name:'home'});
                     } else {
                         this.show = true
