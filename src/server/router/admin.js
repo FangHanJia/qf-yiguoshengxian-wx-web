@@ -9,7 +9,8 @@ module.exports = {
             // 获取管理员信息
             let username  = req.body.username;
             let password = req.body.password;
-            let result = await db.select('manager',{});
+            let result = await db.select('manager',{username,password});
+            res.send(result);
         })
     }
 }
