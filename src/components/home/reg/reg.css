@@ -28,15 +28,16 @@
     position:absolute;
     right: 0.390625rem;
     top: 0.214375rem;
-    color:#fff;
+    color:#DDEFE6;
     display:block;
-    width: 1.1875rem;
-    height: 0.421875rem;
+    width: 1.1575rem;
+    height: 0.401875rem;
     text-align: center;
     background-color:#008842;
     font-size:0.2475rem;
     line-height: 0.421875rem;
     border-radius:0.078125rem;
+    font-family:'宋体';
 }
 
 
@@ -80,4 +81,33 @@
     height: 0.53125rem;
     background:url('../../img/l3.png') center no-repeat;
     transform:translateX(125%);
+}
+
+#tanchuang{
+    position:absolute;
+    width:3.6875rem;
+    height:1.375rem;
+    border-radius:0.138125rem;
+    background-color:#fff;
+    box-shadow:  0 0 0 200000px rgba(0, 0 ,0 ,0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*display:none;*/
+}
+#tanchuang p{
+    font-size:0.1875rem;
+    color:#333;
+    text-align:center;
+    width: 100%;
+    height: 0.859375rem;
+    line-height:0.859375rem;
+    border-bottom:0.03125rem solid #F7F7F7;
+}
+#tanchuang em{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size:0.1875rem;
+    line-height:0.5125rem;
 }

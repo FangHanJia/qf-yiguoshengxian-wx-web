@@ -16,9 +16,10 @@ html,body{height: 100%;}
     float:left;
     width: 0.953125rem;
     height: 0.953125rem;
-    background-color:#fff;
     border-radius:50%;
     margin-right:0.15625rem;
+    background:url('../img/l4.jpg') no-repeat;
+    background-size: cover;
 }
 .header .headl p{
     margin-top:0.2600rem;
