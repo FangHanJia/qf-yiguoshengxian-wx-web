@@ -3,7 +3,7 @@
         <router-link to="/">
             <li ref="index"><i class="iconfont icon-shouye"></i><span>首页</span></li>
         </router-link>
-        <router-link to="/fenlei">
+        <router-link to="/fenlei/jinkou">
         <li ref="fenlei"><i class="iconfont icon-fenlei"></i><span>分类</span></li>
         </router-link>
         <router-link to="/details">
