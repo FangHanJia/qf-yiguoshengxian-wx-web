@@ -14,6 +14,7 @@
 </template>
 
 <script>
+
     import './index.css'
     import hh from './header/header.vue'
     import menus from './main/main.vue'

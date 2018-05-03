@@ -1,11 +1,7 @@
 <template>
 
   <slider :pages="pages" :sliderinit="sliderinit">
-    <!-- slot  -->
-  </slider>
-
-
-  
+  </slider>  
 </template>
  
 <script>
@@ -18,10 +14,8 @@ export default {
         pages:[
           {
             title: '',
-            // img:'<img src="../../img/l1.jpg" alt="">'
             style:{
              background:'url(src/components/img/l1.jpg)'
-            //  // background:'blue'
             }
           },
           {
@@ -34,16 +28,13 @@ export default {
             title: 'slide3',
             style:{
             background:'url(src/components/img/l3.jpg)'
-
-              // background:'url(img/d.jpg)',
             }
           },
           {
             title: '',
-            // img:'<img src="../../img/l1.jpg" alt="">'
             style:{
              background:'url(src/components/img/l4.jpg)'
-            //  // background:'blue'
+ 
             }
           },
           {
@@ -56,16 +47,12 @@ export default {
             title: 'slide3',
             style:{
             background:'url(src/components/img/l6.jpg)'
-
-              // background:'url(img/d.jpg)',
             }
           },
           {
             title: 'slide3',
             style:{
             background:'url(src/components/img/l7.jpg)'
-
-              // background:'url(img/d.jpg)',
             },
           }
 
