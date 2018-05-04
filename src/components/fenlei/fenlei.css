@@ -10,7 +10,6 @@ body,html{height: 100%;}
 .main_t input{float: left;border:none;height: 0.375rem;width:4.0rem;margin: 0.078125rem 0 0 0.125rem;border-radius: 0.3125rem;background-color:#F4F4F4;padding-left:0.46875rem;font-size:12px;}
 .main_t p{float: left; color:#11B57C;line-height:0.5625rem;padding-left: 0.15625rem;font-size:12px;}
 
-
 .main_l{float: left;margin-top: 0.5625rem;
     width:1.5625rem; background-color:#F4F4F4;}
 .main_l ul li{padding-left:0.125rem;line-height:0.625rem;font-size:12px;}
@@ -25,7 +24,7 @@ body,html{height: 100%;}
     float:left;width:3.28125rem;
     font-size:20px;color:#f90;margin-top: 0.5625rem;
 }
-.z-body .tt{padding-left:0.15625rem;/*display:flex;*//*justify-content: space-between;*/}
+.z-body .tt{padding-left:0.15625rem;}
 .z-body .tt li{ float: left; width:0.78125rem;margin-right:0.15625rem;height:1.875rem;}
 .z-body .tt li img{width:0.9375rem;height: 0.9375rem;}
 .z-body .tt li .pt{font-size:12px;text-align: center;color:#8F808F;} 
