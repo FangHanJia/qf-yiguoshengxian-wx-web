@@ -90,7 +90,7 @@
                     iconCSS:"",
                     iconImg:"src/components/img/cart.png",
                     endFunction:function(element){
-                        // $("#num").html(parseInt($("#num").html())+1);
+                        $("#num").html(parseInt($("#num").html())+1);
                         //  console.log(element);
                         return false;
                     }
