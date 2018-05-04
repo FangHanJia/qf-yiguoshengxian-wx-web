@@ -1,9 +1,10 @@
 <template>
     <div id="particulars">
+
         <div class="bigimgs">
              <img :src=" $route.query.img"/>
         </div>
-        <div class="goods">
+        <div class="goods" :data-id="$route.query.id">
                 <p class="content2">{{$route.query.content}}</p>
                 <p class="intro2">{{$route.query.intro}}</p>
                 <p class="price2">￥{{$route.query.price}}<span class="chandi">产地：<span>河北唐山</span></span></p>
@@ -17,7 +18,7 @@
                     <li @click="search2"><i class="iconfont icon-gouwuchekong gouwuche menu-a "><span id="num" style="color: red;">0</span></i>购物车</li>
                 </ul>
             </div>
-            <div class="addcar carts">加入购物车</div>
+            <div class="addcar carts" @click="addcarts($route.query.id,$route.query.img,$route.query.content,$route.query.price)">加入购物车</div>
         </div>
         
         <div class="xinxi">
@@ -50,7 +51,7 @@
             <p>猜你喜欢</p>
             <ul class="guess">
                  <li v-for="(item,index) in guess_list"  :data-id="item.id">
-                    <router-link :to="{path:'/particulars',query: {img:item.img,content:item.content,intro:item.intro,price:item.price,qtycont:item.qtycont}}">
+                    <router-link :to="{path:'/particulars',query: {img:item.img,content:item.content,price:item.price,qtycont:item.qtycont}}">
                         <div class="imgs3">
                             <img :src="item.img">
                         </div>
@@ -80,10 +81,21 @@
     // 
     export default{
         chuancan,
+        carDH,
         data(){
             return{
                 result:1,
-                guess_list:[]
+                guess_list:[],
+                 listresult:{
+                            id:'',
+                            img:'',
+                            content:'',
+                            price:'',
+                            is_selected: false,
+                            qty:''
+                        },
+                carresult:[]
+                
             }
         },
           mounted(){
@@ -100,7 +112,22 @@
                 }
                 // console.log(result)
                 this.guess_list = result;
-            })
+            });
+
+            // 购物车飞入效果
+                $(function(){
+                    $('.carts').shoping({
+                        endElement:".menu-a",
+                        iconCSS:"",
+                        iconImg:"src/components/img/cart.png",
+                        endFunction:function(element){
+                            $("#num").html(parseInt($("#num").html())+1);
+                            //  console.log(element);
+                            return false;
+                        }
+                    })
+                });  
+
         },
        methods:{
            search1(){
@@ -117,8 +144,39 @@
                 this.result++,
                 this.$emit('input', {res: this.result, other: '++'})
                 } ,
+           addcarts(im1,im2,im3,im4){
+            
+                var idx;
+                var has = this.carresult.some(function(g,i){
+                    idx = i;
+                    return g.id === im1;
+                });
+                if(has){
+                    this.carresult[idx].qty += 1;
+                }else{
+                    this.listresult = {
+                                    id:im1,
+                                    img:im2,
+                                    content:im3,
+                                    price:im4,
+                                    is_selected: false,
+                                    qty:1
+                                }
+                        this.carresult.push(this.listresult);
+                        console.log( this.carresult)
+
+                }
+                var d = new Date(); 
+                // console.log(d)
+                d.setDate(d.getDate()+7);
+                
+                document.cookie = 'goodlist='+JSON.stringify(this.carresult)+';expires=' + d.toUTCString();
+                
+            }     
+           
+        },
        }
-    }
+    
 
 
 </script>
