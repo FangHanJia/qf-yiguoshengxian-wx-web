@@ -16,7 +16,7 @@
             return {
                 config:{
                     url:'getuser',
-                    cols:['username','password','address']
+                    cols:['receiver','username','password','province','city','region','address']
                 }
             }
         }
