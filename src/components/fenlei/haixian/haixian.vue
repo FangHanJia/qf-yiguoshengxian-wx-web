@@ -1,8 +1,8 @@
 <template>
     <ul class="tt">
-        <li v-for="(item,idx) in dataset">
+        <li v-for="(item,idx) in seaFood">
             <img :src="item.img">
-            <p class="pt">{{item.intro}}</p>
+            <p class="pt">{{item.content}}</p>
         </li>
     </ul> 
 </template>
@@ -11,7 +11,7 @@
     export default{
         data(){
             return{
-                dataset:[]
+                seaFood:[]
             }
         },
         mounted(){
@@ -19,12 +19,12 @@
                 var pl=[];
                 var lt=res.data.data;
                 for(var i=0;i<lt.length;i++){
-                    if(lt[i].type=='d'){
+                    if(lt[i].type=='seaFood'){
                         pl.push(lt[i])
                     }      
                 } 
-                    this.dataset=pl;
-                    console.log( this.dataset)
+                    this.seaFood=pl;
+                    console.log( this.seaFood)
             });
         },
     }

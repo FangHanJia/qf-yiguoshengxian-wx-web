@@ -1,8 +1,8 @@
 <template>
     <ul class="tt">
-        <li v-for="(item,idx) in dataset">
+        <li v-for="(item,idx) in enjoyTaste">
             <img :src="item.img">
-            <p class="pt">{{item.intro}}</p>
+            <p class="pt">{{item.content}}</p>
         </li>
     </ul> 
 </template>
@@ -11,7 +11,7 @@
     export default{
         data(){
             return{
-                dataset:[]
+                enjoyTaste:[]
             }
         },
         mounted(){
@@ -19,12 +19,12 @@
                 var pl=[];
                 var lt=res.data.data;
                 for(var i=0;i<lt.length;i++){
-                    if(lt[i].type=='b'){
+                    if(lt[i].type=='enjoyTaste'){
                         pl.push(lt[i])
                     }      
                 } 
-                    this.dataset=pl;
-                    console.log( this.dataset)
+                    this.enjoyTaste=pl;
+                    console.log( this.enjoyTaste)
             });
         },
     }

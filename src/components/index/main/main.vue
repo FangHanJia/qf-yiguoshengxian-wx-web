@@ -5,20 +5,20 @@
       </div>
         <router-link to="/fenlei/jinkou">
           <div class="box1"> 
-            <img src="../../img/a.gif" height="115" width="375" alt="" />
+            <img src="../../img/a.gif" style="width:100%" alt="" />
               <ul class="t1">
-                <li style="margin-left:0.3125rem;"><img src="../../img/a1.png" height="48.3" width="48.3" alt="" /><p>新鲜水果</p></li>
-                <li><img src="../../img/a2.png" height="48.3" width="48.3" alt="" /><p>精选肉类</p></li>
-                <li><img src="../../img/a3.png" height="48.3" width="48.3" alt="" /><p>海鲜水产</p></li>
-                <li><img src="../../img/a4.png" height="48.3" width="48.3" alt="" /><p>快手料理</p></li>
-                <li style="margin-left:0.3125rem;"><img src="../../img/a5.png" height="48.3" width="48.3" alt="" /><p>会员福利</p></li>
-                <li><img src="../../img/a6.png" height="48.3" width="48.3" alt="" /><p>精品原箱</p></li>
-                <li><img src="../../img/a7.png" height="48.3" width="48.3" alt="" /><p>新品尝鲜</p></li>
-                <li><img src="../../img/a8.png" height="48.3" width="48.3" alt="" /><p>即烹美食</p></li>
+                <li style="margin-left:0.3125rem;"><img src="../../img/a1.png"  alt=""/><p>新鲜水果</p></li>
+                <li><img src="../../img/a2.png" alt="" /><p>精选肉类</p></li>
+                <li><img src="../../img/a3.png"  alt="" /><p>海鲜水产</p></li>
+                <li><img src="../../img/a4.png"  alt="" /><p>快手料理</p></li>
+                <li style="margin-left:0.3125rem;"><img src="../../img/a5.png"  alt="" /><p>会员福利</p></li>
+                <li><img src="../../img/a6.png"  alt="" /><p>精品原箱</p></li>
+                <li><img src="../../img/a7.png"  alt="" /><p>新品尝鲜</p></li>
+                <li><img src="../../img/a8.png"  alt="" /><p>即烹美食</p></li>
               </ul> 
           </div>
           <div class="box2"> 
-            <img src="../../img/b.jpg" height="217.39" width="375" alt=""  />
+            <img src="../../img/b.jpg" style="width:100%" alt=""  />
               <ul class="t2">
                 <li v-for="(item,idx) in dataset">
                   <img :src="item.img">
@@ -32,7 +32,7 @@
      
 
           <div class="box2">
-            <img src="../../img/c.jpg" height="217.39" width="375" alt=""  />
+            <img src="../../img/c.jpg" alt="" style="width:100%;" />
               <ul class="t2">
                 <li v-for="(item,idx) in c">
                   <img :src="item.img">
@@ -45,7 +45,7 @@
           </div>
 
           <div class="box2">
-            <img src="../../img/d.jpg" height="217.39" width="375" alt="" />
+            <img src="../../img/d.jpg" height="217.39"  alt="" style="width:100%"/>
               <ul class="t2">
                 <li v-for="(item,idx) in d">
                   <img :src="item.img">

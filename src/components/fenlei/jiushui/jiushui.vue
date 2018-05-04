@@ -2,7 +2,7 @@
     <ul class="tt">
         <li v-for="(item,idx) in dataset">
             <img :src="item.img">
-            <p class="pt">{{item.intro}}</p>
+            <p class="pt">{{item.content}}</p>
         </li>
     </ul> 
 </template>
@@ -19,7 +19,7 @@
                 var pl=[];
                 var lt=res.data.data;
                 for(var i=0;i<lt.length;i++){
-                    if(lt[i].type=='c'){
+                    if(lt[i].type=='b'){
                         pl.push(lt[i])
                     }      
                 } 
