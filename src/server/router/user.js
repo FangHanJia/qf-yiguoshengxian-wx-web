@@ -88,7 +88,7 @@ module.exports = {
 
             // 调用数据库模块
             let result = await db.update('user',{username},{address,receiver,province,city,region});
-            res.send(result);
+            res.send(apiResult(result,{receiver,username,address}));
         }) ;
         // 获取所有用户
         app.get('/getuser',async (req,res)=>{
