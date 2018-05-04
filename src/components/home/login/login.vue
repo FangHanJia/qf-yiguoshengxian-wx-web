@@ -70,9 +70,11 @@
                     return ;
                 }
 
-                http.post('login',this.data).then((res) =>{console.log(res);
+                http.post('login',this.data).then((res) =>{
                     if(res.status){
-                        console.log(res);
+                        window.localStorage.setItem('token',res.data.token)
+                        window.localStorage.setItem('username',res.data.username)
+
                         router.push({name:'home'});
                     } else {
                         this.show = true
