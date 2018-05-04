@@ -1,9 +1,11 @@
 <template>
+
     <ul>
     <li v-for="obj in menus" :key="obj.path">
     <router-link :to="obj.path">{{obj.text}}</router-link> 
     </li>
     </ul>
+
 </template>
 <script type="text/javascript">
     export default{

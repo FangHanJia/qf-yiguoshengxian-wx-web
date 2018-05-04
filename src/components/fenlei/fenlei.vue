@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="du">
         <div class="main_t">
           <hd></hd >  
         </div>

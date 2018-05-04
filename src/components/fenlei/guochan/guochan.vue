@@ -1,6 +1,6 @@
 <template>
     <ul class="tt">
-        <li v-for="(item,idx) in dataset">
+        <li v-for="(item,idx) in nativeFruit">
             <img :src="item.img">
             <p class="pt">{{item.intro}}</p>
         </li>
@@ -11,7 +11,7 @@
     export default{
         data(){
             return{
-                dataset:[]
+                nativeFruit:[]
             }
         },
         mounted(){
@@ -19,12 +19,12 @@
                 var pl=[];
                 var lt=res.data.data;
                 for(var i=0;i<lt.length;i++){
-                    if(lt[i].type=='c'){
+                    if(lt[i].type=='nativeFruit'){
                         pl.push(lt[i])
                     }      
                 } 
-                    this.dataset=pl;
-                    console.log( this.dataset)
+                    this.nativeFruit=pl;
+                    console.log( this.nativeFruit)
             });
         },
     }
