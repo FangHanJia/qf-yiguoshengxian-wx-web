@@ -1,7 +1,24 @@
 // 操作用户登陆注册的模块
 const db = require('../api/db');
 const apiResult = require('../api/apiResult');
+const jwt = require('jsonwebtoken');
 
+// 判断用户是否已登陆
+let filter = function(req,res,next){
+    // 获取前端的token
+    let token = req.headers['auth'];
+    if(!token){
+        res.send(apiResult(false,{},'unauth'));
+    }else{
+        jwt.verify(token,'1234',(error,result)=>{
+            if(error){
+                res.send(apiResult(false,{},'unauth'));
+            }else{
+                next();
+            }
+        })
+    }
+}
 module.exports = {
     account(app){
         // 注册
@@ -31,7 +48,17 @@ module.exports = {
             let password = req.body.password;
             console.log(username);
             let result = await db.select('user',{username,password});
-            res.send(result);
+
+            // 如果用户存在则设置token
+            if(result.status){
+                let token = jwt.sign({username},'1234',{
+                    'expiresIn':60*60
+                })
+                let ar = apiResult(result.status,{token,username});
+                res.send(ar);
+            }else{
+                res.send(result);
+            }
         });
         // 删除
         app.post('/remove',async (req,res)=>{
@@ -60,6 +87,10 @@ module.exports = {
             // 调用数据库模块
             let result = await db.select('user');
             res.send(result);
+        });
+        // 获取用户登陆状态
+        app.post('/getStatus', filter,(req,res)=>{
+            res.send(apiResult(true));
         })
     }
     

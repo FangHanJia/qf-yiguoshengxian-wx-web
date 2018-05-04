@@ -1,7 +1,6 @@
-    import axios from 'axios'
+import axios from 'axios'
 
-const baseUrl = 'http://localhost:88/'
-// const baseUrl = 'http://10.3.133.238:88/'
+const baseUrl = 'http://10.3.133.238:88/'
 let filterUrl = (_url) => {
     if(_url && _url.startsWith('http')){
         return _url;
@@ -43,8 +42,8 @@ export default {
                     return ret
                 }], 
             }).then(res => {
-                if(!res.data.status && res.data.error == "unauthorized"){
-                    router.push('login');
+                if(!res.data.status && res.data.message == "unauth"){
+                    router.push({name:'login'});   
                     return false;
                 }               
                 console.log(res)

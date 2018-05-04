@@ -28,6 +28,9 @@ user.account(app);
 const product = require('./product');
 product.product(app);
 
+const admin = require('./admin');
+admin.manager(app);
+
 // 暴露模块
 module.exports = {
     start(_port = 88){

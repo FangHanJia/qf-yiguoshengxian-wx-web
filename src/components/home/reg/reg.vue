@@ -86,6 +86,7 @@
                         router.push({name:'login'});
                     } else{
                         this.show = true
+                        this.cuowu = '手机号已被注册！'
                     }
                 })
             },

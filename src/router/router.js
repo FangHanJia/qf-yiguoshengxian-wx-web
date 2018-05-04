@@ -35,11 +35,11 @@ import zahuo from '../components/fenlei/zahuo/zahuo'
 
 
 // 婷婷路由
-import list from '../components/list/list'
-import sale from '../components/sale/sale'
-import newproduct from '../components/newproduct/newproduct'
-import price from '../components/price/price'
-import particulars from '../components/particulars/particulars'
+import list from '../components/list/list.vue'
+import sale from '../components/sale/sale.vue'
+import newproduct from '../components/newproduct/newproduct.vue'
+import particulars from '../components/particulars/particulars.vue'
+
 
 
 // 服务端路由
@@ -58,10 +58,8 @@ const router = new VueRouter({
         // tt
         {path: '/list', component: list, name: 'list',children:[
             {path: '/sale', component: sale, name: 'sale'},
-            {path: '/newproduct', component: newproduct, name: 'newproduct'},
-            {path: '/price', component: price, name: 'price'}
+            {path: '/newproduct', component: newproduct, name: 'newproduct'}
         ]},
-
         {path: '/particulars', component: particulars, name: 'particulars'}, 
         //jinqiu
           {path: '/fenlei', component: fenlei, name: 'fenlei',children:[
@@ -78,9 +76,6 @@ const router = new VueRouter({
             {path: 'sushi', component: sushi, name: 'sushi'}
          ]},
         
-
-
-
 
         // 服务端路由
         {path:'/serverlogin',component:serverlogin,name:'serverlogin'},
