@@ -1,7 +1,8 @@
 <template>
     <div id="jiesuanl">
         <router-link to='/dizhi'><div class="diz">
-            <p><i class="iconfont icon-wodeshouhuodizhi"></i>添加收货地址<em class="iconfont icon-icon--"></em></p>
+            <p v-show="show"><i class="iconfont icon-wodeshouhuodizhi"></i>添加收货地址<em class="iconfont icon-icon--"></em></p>
+            <p v-show="yshow"><i class="iconfont icon-wodeshouhuodizhi"></i>{{dizhi}} {{mz}}<em class="iconfont icon-icon--"></em></p>
         </div></router-link>
 
         <div class="shangp">
@@ -39,7 +40,28 @@
 <script>
     import './jiesuan.css'
 
-    export default{}
+    export default{
+        data(){
+            return {
+                dizhi:'',
+                mz:'',
+                show:true,
+                yshow:false
+            }
+        },
+        mounted(){
+            this.dizhi = window.localStorage.getItem('dizhi')
+            this.mz = window.localStorage.getItem('mz')
+            console.log(this.dizhi)
+            if(this.dizhi == null || this.dizhi == ''){
+                this.show = true
+                this.yshow = false
+            } else {
+                this.show = false
+                this.yshow = true
+            }
+        }
+    }
 
 
 </script>
