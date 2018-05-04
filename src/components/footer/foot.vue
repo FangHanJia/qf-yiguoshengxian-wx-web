@@ -6,9 +6,6 @@
         <router-link to="/fenlei/jinkou">
         <li ref="fenlei"><i class="iconfont icon-fenlei"></i><span>分类</span></li>
         </router-link>
-        <router-link to="/details">
-        <li ref="details"><i class="iconfont icon-chimian" style="color:#1CB77B;"></i><span>吃饭吧</span></li>
-        </router-link>
         <router-link to="/car">
         <li ref="car"><i class="iconfont iconfont icon-gouwuchekong"></i><span>购物车</span></li>
         </router-link>
@@ -29,7 +26,7 @@
                     // console.log(this.$refs.index);
                     this.$refs.index.classList.add('active');
 
-                }else if(this.$router.history.current.path=='/fenlei'){
+                }else if(this.$router.history.current.path=='/fenlei/jinkou'){
                      this.$refs.fenlei.classList.add('active');
                 }else if(this.$router.history.current.path=='/details'){
                      this.$refs.details.classList.add('active');
