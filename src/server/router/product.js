@@ -78,7 +78,25 @@ module.exports = {
             let result = await db.insert(username,{goodslist});
 
             res.send(result);
+        });
+        // 获取用户商品购物车数据
+        app.post('/getCart',async (req,res)=>{
+            // 获取用户名
+            let username = req.body.username;
 
+            // 获取购物车数据
+            let result = await db.select(username);
+            res.send(result);
+        });
+
+        // 商品模糊查询
+        app.post('/searchproduct',async (req,res)=>{
+            // 获取关键字
+            const keyword  = req.body.keyword;
+            const reg = new RegExp(keyword,'i');
+            // 调用数据库模块
+            let result = await db.search('products',reg);
+            res.send(result);
         })
     }
 }

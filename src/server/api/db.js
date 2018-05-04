@@ -52,5 +52,14 @@ module.exports = {
         }catch(error){
             return apiResult(false,error);
         }
+    },
+    // 模糊查询
+    async search(_collection,_reg){
+        try{
+            let items = await db.collection(_collection).find({content:{$regex:_reg}}).toArray();
+            return apiResult(items.length > 0,items);
+        }catch(error){  
+            return apiResult(false,error);
+        }
     }
 }
