@@ -34,10 +34,10 @@ color:#000;font-size:16px;}
 
 .main .bot1 h1,.main .bot3 h1,.main .bot4 h1,.main .bot8 h1{font-size:16px;text-align: center;height: 0.78125rem;line-height: 0.78125rem;color:#333333;}
 .main .bot1 .b1,.main .bot3 .b3,.main .bot4 .b4,.main .bot8 .b8
-{color:#000;height:11.25rem;font-size:12px;text-align: center;line-height: 0.3125rem;border-bottom:5px solid #ccc;}
+{color:#000;height:9.375rem;font-size:12px;text-align: center;line-height: 0.3125rem;border-bottom:5px solid #ccc;}
 .main .bot1 .b1 .qt,.main .bot3 .qt,.main .bot4 .qt,.main .bot8 .qt{color:#ccc;}
 
-.main .bot1 .b1 li{float: left;width:2.34375rem;height:3.4375rem;margin-right: 0.078125rem;}
+.main .bot1 .b1 li{float: left;width:2.34375rem;height:2.8125rem;margin-right: 0.078125rem;}
   .main .bot1 .b1 li .cn,.main .bot3 .b3 li .cn, .main .bot4 .b4 li .cn,.main .bot8 .b8 li .cn{margin-top: 0.0625rem;}
 .main .bot1 .b1 li img, .main .bot3 .b3 li img,.main .bot4 .b4 li img, .main .bot4 .b4 li img,.main .bot8 .b8 li img{/*width:1.5625rem;height:1.5625rem;*/padding: 0.15625rem 0 0 0.3125rem;}/*1.875rem*/
 .main .bot1 .b1 li:nth-child(2n),.main .bot3 .b3 li:nth-child(2n), .main .bot4 .b4 li:nth-child(2n), .main .bot8 .b8 li:nth-child(2n){padding-left: 0.15625rem;}
@@ -45,13 +45,13 @@ color:#000;font-size:16px;}
 .main .bot1 .b1 li .tip,.main .bot3 .b3 li .tip,.main .bot4 .b4 li .tip,  .main .bot8 .b8 li .tip{color:#11B57C;}
 
  .main .bot1 .b1 li .price, .main .bot3 .b3 li .price, .main .bot4 .b4 li .price,.main .bot8 .b8 li .price{color:red;font-size:12px;}
- .main .bot4 .b4{font-size:12px;height:10.9375rem; line-height: 0.3125rem;text-align: center;border-bottom:5px solid #ccc;}
- .main .bot3 .b3{font-size:12px;height:7.1875rem; line-height: 0.3125rem;text-align: center;border-bottom:5px solid #ccc;}
+ .main .bot4 .b4{font-size:12px;height:8.75rem; line-height: 0.3125rem;text-align: center;border-bottom:5px solid #ccc;}
+ .main .bot3 .b3{font-size:12px;height:6.25rem; line-height: 0.3125rem;text-align: center;border-bottom:5px solid #ccc;}
  .main .bot4 .b4 li,.main .bot3 .b3 li, .main .bot8 .b8 li{
-    float: left;width:2.34375rem;height:3.4375rem;
+    float: left;width:2.34375rem;height:2.65625rem;
  }
 
-.main .bot8 .b8{height:10.625rem;border-bottom:5px solid #ccc;
+.main .bot8 .b8{height:8.59375rem;border-bottom:5px solid #ccc;
     font-size:12px;line-height: 0.3125rem;text-align: center;}
 .main .bot9 p{margin-bottom:0.625rem;height:0.703125rem;background-color:#F9F9F9;text-align: center;font-size:12px;padding-top: 0.125rem;color:#CDCCCC;}
 
