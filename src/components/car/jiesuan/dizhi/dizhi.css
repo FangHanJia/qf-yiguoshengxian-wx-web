@@ -17,6 +17,10 @@
     padding-top:0.15625rem;
     position:relative;
     border-bottom: 1px solid #eee;
+    margin: 0;
+}
+#dizhi ul li:last-child{
+    border-bottom: none;
 }
 #dizhi ul li i{
     display:block;
