@@ -15,8 +15,8 @@
                 </div>
         </div>
             <ul  class="goodslist">
-                <li v-for="(item,index) in goods_list"  :data-id="item.id">
-                    <router-link :to="{path:'/particulars',query: {img:item.img,content:item.content,intro:item.intro,price:item.price,qtycont:item.qtycont}}">
+                <li v-for="(item,index) in goods_list"  :data-id="item.id" ref="listbox" >
+                    <router-link :to="{path:'/particulars',query: {id:item.id,img:item.img,content:item.content,intro:item.intro,price:item.price,qtycont:item.qtycont}}">
                         <div class="imgs">
                             <img :src="item.img">
                         </div>
@@ -28,10 +28,10 @@
                             
                         </div>
                     </router-link>
-                    <i class="iconfont icon-jiahao carts"></i>
+                    <i class="iconfont icon-jiahao carts" @click="addcarts(item)"></i>
                 </li>
             </ul>
-            <span class="car menu-a" @click="search3" ><i class="iconfont icon-gouwuchekong"><span id="num" style="color: red;">0</span></i></span>
+            <span class="car menu-a" @click="search3" ><i class="iconfont icon-gouwuchekong"><span id="num" style="color: red;">{{count}}</span></i></span>
     
         <router-view ></router-view>
     </div>
@@ -39,24 +39,34 @@
 
 <script>
     import './list.css'
-    import tab from './list.js'
-    import vue from './vue.js'
+    // import tab from './list.js'
+    
     import fly from './jquery-addShopping.js'
-    import paixu from './jquery-2.2.3.min.js'
+   
     import http from '../../utils/httpclient'
     export default{
-       tab,
-       vue,
-       paixu,
+    //    tab,
+        fly,
+      
           data(){
             return{
-                goods_list:[
-                    
-                    ],
-                    n:0,
+                goods_list:[],
+                n:0,
+                listresult:{
+                            id:'',
+                            img:'',
+                            content:'',
+                            price:'',
+                            is_selected: false,
+                            qty:''
+                        },
+                carresult:[],
+                count:0,
+                num:0
                     // show:flase
             }
         },
+       
         mounted(){
             http.get('http://10.3.133.238:88/getproduct',{}).then(res=>{
                 // console.log(res);
@@ -72,6 +82,20 @@
                 // console.log(result)
                 this.goods_list = result;
             })
+
+            //飞入购物车
+              $(function(){
+                $('.carts').shoping({
+                    endElement:".menu-a",
+                    iconCSS:"",
+                    iconImg:"src/components/img/cart.png",
+                    endFunction:function(element){
+                        // $("#num").html(parseInt($("#num").html())+1);
+                        //  console.log(element);
+                        return false;
+                    }
+                })
+            });
         },
         methods:{
             list(){
@@ -95,11 +119,52 @@
             },
             search3(){
                 this.$router.push({name:'car'})
+            },
+            addcarts(item){
+                
+
+                var idx;
+                var has = this.carresult.some(function(g,i){
+                    idx = i;
+                    return g.id === item.id;
+                });
+                if(has){
+                    this.carresult[idx].qty += 1;
+                   
+                    
+                }else{
+                    this.listresult = {
+                                    id:item.id,
+                                    img:item.img,
+                                    content:item.content,
+                                    price:item.price,
+                                    is_selected: false,
+                                    qty:1
+                                }
+                        this.carresult.push(this.listresult);
+                        console.log( this.carresult)
+                };
+                        // console.log( this.carresult.length)
+                
+                //     for(var i=0;i<this.carresult.length;i++){
+                //             //  console.log(this.carresult[i].qty) 
+                //              var count = this.carresult[i].qty;
+
+                //     }
+                //    this.count  =count
+
+                var d = new Date(); 
+                // console.log(d)
+                d.setDate(d.getDate()+7);
+                
+                document.cookie = 'goodlist='+JSON.stringify(this.carresult)+';expires=' + d.toUTCString();
             }
-        }
+        },
+        
 
      }
   
+                    // <router-link :to="{path:'/particulars',query: {img:item.img,content:item.content,intro:item.intro,price:item.price,qtycont:item.qtycont}}">
 
 
 </script>
