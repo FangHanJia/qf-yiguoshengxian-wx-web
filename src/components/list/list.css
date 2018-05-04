@@ -69,6 +69,9 @@ img{
     font-size: 16px;
     color:#000;
     line-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
 }
 .intro{
     font-size: 14px;
