@@ -8,8 +8,10 @@
         <div class="shangp">
             <p>共<span>7</span>件商品<em class="iconfont icon-icon--"></em></p>
             <ul>
-                <li></li>
-                <li></li>
+                <li><img src="../../img/a1.png"></li>
+                <li><img src="../../img/a2.png"></li>
+                <li><img src="../../img/a3.png"></li>
+                <li><img src="../../img/a4.png"></li>
             </ul>
         </div>
 

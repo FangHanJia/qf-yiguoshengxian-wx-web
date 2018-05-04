@@ -26,7 +26,7 @@
                     // console.log(this.$refs.index);
                     this.$refs.index.classList.add('active');
 
-                }else if(this.$router.history.current.path=='/fenlei'){
+                }else if(this.$router.history.current.path=='/fenlei/jinkou'){
                      this.$refs.fenlei.classList.add('active');
                 }else if(this.$router.history.current.path=='/details'){
                      this.$refs.details.classList.add('active');

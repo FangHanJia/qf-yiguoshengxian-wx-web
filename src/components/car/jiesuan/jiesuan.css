@@ -59,8 +59,12 @@
 #jiesuanl .shangp ul li{
     width: 0.78125rem;
     height: 0.65625rem;
-    background-color: red;
     margin-right: 0.3125rem;
+
+}
+#jiesuanl .shangp ul li img{
+    width: 0.78125rem;
+    height: 0.65625rem;
 }
 #jiesuanl .peis{
     height: 2.795625rem;
