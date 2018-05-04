@@ -1,13 +1,14 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-var box=document.getElementById('box');
+var nav=document.getElementById('nav');
     window.onscroll=function(){
-    var scroll=window.scrollY;
-        if(scroll>0){
-            box.className="tou fixed";
-        } else{
-            box.className='tou';
+    var scrollTop=window.scrollY;
+        if(scroll>=scrollTop){
+            nav.className="ml fixed";
+        } 
+        else{
+           nav.className='ml';
 
 
             }

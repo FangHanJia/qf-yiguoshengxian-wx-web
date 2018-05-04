@@ -13,21 +13,17 @@ body,html{height: 100%;}
     width:1.5625rem; background-color:#F4F4F4;font-size:14px;}
 .main_l ul li{padding-left:0.125rem;line-height:0.703125rem;}
 .main_l ul li:first-child{margin-top:0.15625rem;}
-/*.main_l ul li:first-child{background-color:#fff;border-left:0.046875rem solid #11B57C;} */
 .main_l ul li:last-child{margin-bottom:0.625rem;}
 .main_l ul li:first-child:hover{background-color:#fff;border-left:0.046875rem solid #11B57C;} 
 .main_l ul li:hover{background-color:#fff;border-left:0.046875rem solid #11B57C;} 
 .main_l a{text-decoration: none;color:#000;}
-.main_l ul li a:hover{color:#11B57C;
-}
-  .z-body{
+.main_l ul li a:hover{color:#11B57C;}
+
+.z-body{
     float:left;width:3.28125rem;
     font-size:20px;color:#f90;
 }
 .z-body .tt{padding-left:0.15625rem;}
-.z-body .tt li{float: left; width:0.78125rem;margin-right:0.15625rem;height:1.25rem;
-
-
-}
+.z-body .tt li{float: left; width:0.78125rem;margin-right:0.15625rem;height:1.5625rem;}
 .z-body .tt li img{width:0.78125rem;}
 .z-body .tt li .pt{font-size:12px;text-align: center;color:#8F808F;} 
