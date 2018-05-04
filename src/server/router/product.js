@@ -67,6 +67,18 @@ module.exports = {
             // 调用数据库模块
             var result = await db.update('products',{id},changeObj);
             res.send(result);
+        });
+        // 用户添加商品到购物车的关联集合
+        app.post('/addToCart',async (req,res)=>{
+            // 获取用户信息和用户购物车数据
+            let username = req.body.username;
+            let goodslist = req.body.goodslist;
+
+            // 调用数据库模块
+            let result = await db.insert(username,{goodslist});
+
+            res.send(result);
+
         })
     }
 }
