@@ -1,25 +1,22 @@
-
-
 <template>
-    <div>
+    <div class="du">
         <div class="main_t">
-     
           <hd></hd >  
         </div>
-        <!-- <div class="box"> -->
-            <div class="main_l">
-            <menus/>
+
+        <div class="main_l">
+          <menus/>
         </div>
-        <div class="z-body">
-        <router-view></router-view>
-        </div>
-            
-     <!--    </div> -->
-        
+
+        <router-link to="/list">
+          <div class="z-body">
+          <router-view></router-view>
+          </div>
+        </router-link>
+
          <footComponent></footComponent>
 
     </div>
-
 </template> 
 <script >
  import footComponent from '../footer/foot.vue'

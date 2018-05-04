@@ -9,6 +9,8 @@ import details from '../components/details/details.vue'
 import car from '../components/car/car.vue'
 import login from '../components/home/login/login.vue'
 import reg from '../components/home/reg/reg.vue'
+import jiesuan from '../components/car/jiesuan/jiesuan.vue'
+import dizhi from '../components/car/jiesuan/dizhi/dizhi.vue'
 
 //金秋
 
@@ -55,6 +57,8 @@ const router = new VueRouter({
         {path: '/', component: index, name: 'index'},
         {path: '/details', component: details, name: 'details'},
         {path: '/car', component: car, name: 'car'},
+        {path: '/jiesuan', component: jiesuan, name: 'jiesuan'},
+        {path: '/dizhi', component: dizhi, name: 'dizhi'},
         // tt
         {path: '/list', component: list, name: 'list',children:[
             {path: '/sale', component: sale, name: 'sale'},

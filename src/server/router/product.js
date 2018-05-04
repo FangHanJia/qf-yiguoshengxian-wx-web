@@ -67,6 +67,36 @@ module.exports = {
             // 调用数据库模块
             var result = await db.update('products',{id},changeObj);
             res.send(result);
+        });
+        // 用户添加商品到购物车的关联集合
+        app.post('/addToCart',async (req,res)=>{
+            // 获取用户信息和用户购物车数据
+            let username = req.body.username;
+            let goodslist = req.body.goodslist;
+
+            // 调用数据库模块
+            let result = await db.insert(username,{goodslist});
+
+            res.send(result);
+        });
+        // 获取用户商品购物车数据
+        app.post('/getCart',async (req,res)=>{
+            // 获取用户名
+            let username = req.body.username;
+
+            // 获取购物车数据
+            let result = await db.select(username);
+            res.send(result);
+        });
+
+        // 商品模糊查询
+        app.post('/searchproduct',async (req,res)=>{
+            // 获取关键字
+            const keyword  = req.body.keyword;
+            const reg = new RegExp(keyword,'i');
+            // 调用数据库模块
+            let result = await db.search('products',reg);
+            res.send(result);
         })
     }
 }
