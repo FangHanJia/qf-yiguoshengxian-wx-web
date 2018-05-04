@@ -15,7 +15,7 @@
                     <span v-text="code" @click="codes"></span>
                 </li>
             </ul>
-            <p>忘记密码?</p>
+            <p>忘记密码?<router-link to="/" class="back">回到首页</router-link></p>
             <div class="lr">
                 <button @click="login">登录</button>
                 <button><router-link to="/reg">立即注册</router-link></button>

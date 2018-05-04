@@ -57,6 +57,11 @@
     color:#008842;
     margin:0.234375rem 0 0 0.3125rem;
 }
+#login .form .back{
+    margin-left:2.453333rem;
+    color:#008842;
+    text-decoration:none;
+}
 
 #login .form .lr{
     margin:0.4375rem 0.40625rem 0 0.4375rem;
