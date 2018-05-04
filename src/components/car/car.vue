@@ -44,7 +44,7 @@
         <div class="js">
             <p><em @click="quanxuan" :class="{ative:all}"></em><i>全选</i></p>
             <p>合计（不含运费）:<span>￥{{total}}</span></p>
-            <h3>去结算(<span>{{Num}}</span>)</h3>
+            <router-link to="/jiesuan"><h3>去结算(<span>{{Num}}</span>)</h3></router-link>
         </div>
         <footComponent></footComponent>
     </div>

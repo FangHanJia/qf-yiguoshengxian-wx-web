@@ -3,10 +3,11 @@
         <div class="header">
             <div class="headl">
                 <span></span>
-                <p>
+                <p v-show="show">
                     <router-link to="/login">登录 </router-link>/
                     <router-link to="/reg">注册</router-link>
                 </p> 
+                <p v-show="usershow">{{username}}</p>
             </div>
             <div class="headr">
                 <i class="iconfont icon-shezhi"></i>
@@ -97,11 +98,37 @@
 <script>
     import './home.css'
     import footComponent from '../footer/foot.vue'
+    import http from '../../utils/httpclient.js'
 
 
     export default {
+        data(){
+            return {
+                show:true,
+                usershow: false,
+                username: ''
+            }
+        },
         components: {
            footComponent
+        },
+        mounted(){
+            
+
+
+            http.post('getStatus',{}).then((res) =>{
+                console.log(res)
+
+                if(res.status){
+                    let name = window.localStorage.getItem('username');
+                    console.log(name)
+                    this.username = name
+                    this.show = false
+                    this.usershow = true
+                }
+            })
+
+
         }
 
     }
