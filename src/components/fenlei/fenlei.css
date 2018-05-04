@@ -27,4 +27,4 @@ body,html{height: 100%;}
 .z-body .tt{padding-left:0.15625rem;}
 .z-body .tt li{ float: left; width:0.78125rem;margin-right:0.15625rem;height:1.875rem;}
 .z-body .tt li img{width:0.9375rem;height: 0.9375rem;}
-.z-body .tt li .pt{font-size:12px;text-align: center;color:#8F808F;} 
+.z-body .tt li .pt{font-size:12px;text-align: center;color:#333;} 
