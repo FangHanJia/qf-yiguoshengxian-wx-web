@@ -29,6 +29,10 @@ module.exports = {
 
             // 用户地址：null
             let address = '';
+            let receiver = '';
+            let province = '';
+            let city = '';
+            let  region = '';
 
             // 调用数据库模块
             // 注册之前先查询是否存在
@@ -36,7 +40,7 @@ module.exports = {
             if(result.status){
                 res.send(apiResult(false));
             }else{
-                let result = await db.insert('user',{username,password,address});
+                let result = await db.insert('user',{username,password,address,receiver,province,city,region});
                 res.send(result);
             }
         });
@@ -76,11 +80,15 @@ module.exports = {
             let username = req.body.username;
 
             // 获取要修改的数据
+            let receiver = req.body.receiver;
             let address = req.body.address;
+            let province = req.body.province;
+            let city = req.body.city;
+            let  region = req.body.region;
 
             // 调用数据库模块
-            let result = await db.update('user',{username},{address});
-            res.send(result);
+            let result = await db.update('user',{username},{address,receiver,province,city,region});
+            res.send(apiResult(result,{receiver,username,address}));
         }) ;
         // 获取所有用户
         app.get('/getuser',async (req,res)=>{

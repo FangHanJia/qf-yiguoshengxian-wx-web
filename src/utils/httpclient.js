@@ -1,4 +1,5 @@
 import axios from 'axios'
+import router from '../router/router.js'
 
 const baseUrl = 'http://10.3.133.238:88/'
 let filterUrl = (_url) => {
@@ -33,6 +34,7 @@ export default {
                 data: _params,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
+                    'auth': window.localStorage.getItem('token')
                 },
                 transformRequest: [function (data) {
                     let ret = ''

@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <div id="box" class="tou">
+    <div class="big">
+       <!--  <div id="bo"> -->
             <hh></hh>
 
-        </div>
+     <!--    </div> -->
         <div class="main">
         
         <menus/>
@@ -19,14 +19,11 @@
     import hh from './header/header.vue'
     import menus from './main/main.vue'
     import footComponent from '../footer/foot.vue'
-
-
     export default {
         components: {
            footComponent,
            menus,
            hh
         }
-
     }
 </script>

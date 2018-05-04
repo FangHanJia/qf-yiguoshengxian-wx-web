@@ -4,18 +4,11 @@
             <thead>
                 <tr>
                     <th v-for="(col,idx) in config.cols">{{col}}</th>
-                    <th>操作</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="(obj,idx) in dataset">
                     <td v-for="(col,idx) in config.cols" :key="idx">{{obj[col]}}</td>
-                    <td>
-                        <button class="btn btn-danger  btn-default btn-sm">
-                            删除
-                        </button>
-                        <button class="btn btn-success btn-sm">编辑</button>
-                    </td>
                 </tr>
             </tbody>
         </table>
