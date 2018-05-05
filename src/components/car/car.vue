@@ -73,13 +73,14 @@
                 this.total = 0;
                 this.Num = 0;
                 let good = 0;
-                let num1 = 0;
 
+                let nums = 0;
                 for(let i=0;i<this.goodlist.length;i++){
                     let _d = this.goodlist[i];
                     if(_d.is_selected){
-                        num1 += _d['price'] * _d['qty'];
-                        this.total = num1.toFixed(2);
+                        nums += _d['price'] * _d['qty'];
+                        this.total = nums.toFixed(1) 
+
                         good += 1;
                         this.Num += 1;
                         if(good == this.goodlist.length){
