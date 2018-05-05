@@ -10,7 +10,7 @@
                         <p>不可用卷</p>
                     </div>
                     <div class="boxr">
-                        <p>{{item.content}}</p><i class="iconfont icon-shanchu"></i>
+                        <p>{{item.content}}</p><i class="iconfont icon-shanchu" @click="shanchu(index)"></i>
                         <div class="youhui">
 
                         </div>
@@ -121,7 +121,15 @@
 
                 this.getTob();
             },
-           
+           shanchu(index){
+               for(var i=0;i<this.goodlist.length;i++){
+                    
+                            this.goodlist.splice(index,1);
+                             break;
+                
+               }
+              
+           }
         },
         components: {
            footComponent
