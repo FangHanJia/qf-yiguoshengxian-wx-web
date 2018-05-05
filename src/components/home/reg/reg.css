@@ -73,8 +73,7 @@
 #reg .log{
     width: 100%;
     height: 0.546875rem;
-    position:absolute;
-    bottom:0.25625rem;
+    margin-top:2.07375rem;
 }
 #reg .log span{
     display:block;
