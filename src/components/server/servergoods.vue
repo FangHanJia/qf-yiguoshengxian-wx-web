@@ -130,6 +130,16 @@
                 }else{
                 }
             }
+        },
+        mounted(){
+            let _username = window.localStorage.getItem('_username');
+            console.log(_username);
+            if(_username && _username == 'admin'){
+                alert('请谨慎操作！');
+            }else{
+                alert('请登陆！')
+                router.push({name:'serverlogin'})
+            }
         }
     } 
 </script>
