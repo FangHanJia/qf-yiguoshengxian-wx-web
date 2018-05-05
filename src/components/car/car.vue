@@ -74,10 +74,13 @@
                 this.Num = 0;
                 let good = 0;
 
+                let nums = 0;
                 for(let i=0;i<this.goodlist.length;i++){
                     let _d = this.goodlist[i];
                     if(_d.is_selected){
-                        this.total += _d['price'] * _d['qty'];
+                        nums += _d['price'] * _d['qty'];
+                        this.total = nums.toFixed(1) 
+
                         good += 1;
                         this.Num += 1;
                         if(good == this.goodlist.length){
@@ -120,6 +123,7 @@
                 this.goodlist[item].qty += 1;
 
                 this.getTob();
+
             },
            shanchu(index){
                for(var i=0;i<this.goodlist.length;i++){
@@ -130,6 +134,9 @@
                }
               
            }
+
+           
+
         },
         components: {
            footComponent
