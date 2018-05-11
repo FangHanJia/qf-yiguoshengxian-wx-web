@@ -1,4 +1,4 @@
 # vue
 - vue项目
 
-- [GitHub浏览地址](https://github.com/FangHanJia/vue/blob/master/index.html#/)
+- [GitHub浏览地址](https://fanghanjia.github.io/vue/index.html#/)
