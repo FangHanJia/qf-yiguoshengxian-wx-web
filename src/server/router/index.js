@@ -4,6 +4,7 @@ const express = require('express');
 const bp = require('body-parser');
 
 const app = express();
+app.use(express.static(path.join(__dirname,'../../components/img/')));
 
 // 跨域处理
 app.all('*', function(req, res, next) {
